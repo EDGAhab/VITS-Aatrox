@@ -227,8 +227,8 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
 
       if global_step % hps.train.eval_interval == 0:
         evaluate(hps, net_g, eval_loader, writer_eval)
-        utils.save_checkpoint(net_g, optim_g, hps.train.learning_rate, epoch, '/content/drive/MyDrive/Genshin_TTS/G_paimon.pth')
-        utils.save_checkpoint(net_d, optim_d, hps.train.learning_rate, epoch, '/content/drive/MyDrive/Genshin_TTS/D_paimon.pth')
+        utils.save_checkpoint(net_g, optim_g, hps.train.learning_rate, epoch, '/content/drive/MyDrive/LOL/G_aatrox.pth')
+        utils.save_checkpoint(net_d, optim_d, hps.train.learning_rate, epoch, '/content/drive/MyDrive/LOL/D_aatrox.pth')
     global_step += 1
   
   if rank == 0:
