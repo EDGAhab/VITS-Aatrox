@@ -341,7 +341,7 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
       g.manual_seed(self.epoch)
 
       #debug
-      print(self.buckets)
+      #print(self.buckets)
   
       indices = []
       if self.shuffle:
@@ -361,7 +361,7 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
     
             # add extra samples to make it evenly divisible
             rem = num_samples_bucket - len_bucket
-            print("len_bucket "+ str(len_bucket))
+            #print("len_bucket "+ str(len_bucket))
             ids_bucket = ids_bucket + ids_bucket * (rem // len_bucket) + ids_bucket[:(rem % len_bucket)]
     
             # subsample
